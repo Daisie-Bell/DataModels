@@ -5,7 +5,7 @@ from svaeva.Paths.MultiAPI.Models import DataModel
 
 class analisys(DataModel):
     def __init__(self, token):
-        self.start(token)
+        super().__init__(token)
         self.add_model("open_ai")
         self.load_wallet()
     

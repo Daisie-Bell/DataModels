@@ -6,7 +6,7 @@ from typing import Any
 class apollo(DataModel):
 
     def __init__(self,token):
-        self.start(token)
+        super().__init__(token)
         self.add_model("open_ai")
         self.add_model("deepgram")
         self.add_model("elevanlabs")

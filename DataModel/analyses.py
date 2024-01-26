@@ -5,7 +5,7 @@ from svaeva.Paths.MultiAPI.Models import DataModel
 
 class analyses(DataModel):
     def __init__(self, token):
-        self.start(token)
+        super().__init__(token)
     
     def store(self,data,skeleton,config=None,user=False):
         deploy_data = data["deploy_data"]

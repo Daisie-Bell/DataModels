@@ -12,7 +12,7 @@ from typing import Any
 class imgdata(DataModel):
 
     def __init__(self,token):
-        self.start(token)
+        super().__init__(token)
         self.add_model("open_ai")
         self.load_wallet()
 
