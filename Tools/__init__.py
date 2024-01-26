@@ -49,9 +49,9 @@ class Tools:
                 #return False
             
     def add_wallet(self,json_input):
-        #wallets = self.svaeva.multi_api.wallet()
-        #print(wallets)
-        wallets = {"key_wallet":{}}
+        wallets = self.svaeva.multi_api.wallet()
+        if wallets is None:
+            self.svaeva.multi_api.wallet.register_wallet("test")
         for row in json_input:
             try:
                 if row not in wallets["key_wallet"]:
